@@ -4,3 +4,11 @@ compile
 depcomp
 install-sh
 missing
+autom4te.cache/*
+.deps/*
+aclocal.m4
+configure
+stamp-h1
+Makefile.in
+config.*
+*.o

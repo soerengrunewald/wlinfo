@@ -58,9 +58,21 @@ static void output_handle_scale(void *data, struct wl_output *wl_output,
   printf("scale: %d\n", scale);
 }
 
+static void output_handle_name(void* data, struct wl_output *wl_output,
+                               const char *name
+) {
+  printf("name: %s\n", name);
+}
+
+static void output_handle_desc(void* data, struct wl_output *wl_output,
+                               const char *desc
+) {
+  printf("description: %s\n", desc);
+}
+
 static const struct wl_output_listener output_listener = {
     output_handle_geometry, output_handle_mode, output_handle_done,
-    output_handle_scale,
+    output_handle_scale, output_handle_name, output_handle_desc
 };
 
 static void global_registry_handler(void *data, struct wl_registry *registry,
