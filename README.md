@@ -2,12 +2,11 @@ Wlinfo queries Wayland for information about physical displays connected to the
 system. It can print information about the physical dimensions of such displays,
 and screen resolution, and display scaling characteristics.
 
-Wlinfo is built as a standard automake/autoconf program:
+Wlinfo is built using meson:
 
 ```bash
-$ ./autogen.sh
-$ ./configure
-$ make
+$ meson setup build
+$ meson compile -C build
 ```
 
 The output of `wlinfo` looks like this:
